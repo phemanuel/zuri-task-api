@@ -38,7 +38,7 @@ class ApiController extends Controller
         // Get the GitHub URL of the full source code
         $githubSourceURL = 'https://github.com/phemanuel/zuri-task-api';
 
-        // Return the information in JSON format
+        // Return the data in JSON format
         $data = [
             'slack_name' => $slackName,
             'current_day_of_week' => $currentDayOfWeek,
