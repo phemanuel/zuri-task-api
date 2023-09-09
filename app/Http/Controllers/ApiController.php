@@ -30,7 +30,7 @@ class ApiController extends Controller
         $currentDayOfWeek = Carbon::now()->format('l');
 
         // Get current UTC time
-        $currentUTCTime = Carbon::now('UTC')->toDateTimeString();
+        $currentUTCTime = $currentUTCTime = gmdate('Y-m-d\TH:i:s\Z');
 
         // Get the GitHub URL of the file being run
         $githubFileURL = URL::to('/') . '/' . __FILE__;        
