@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('zuri-task', [ApiController::class, 'zuriTask']);
+Route::get('/', [ApiController::class, 'zuriTask']);
