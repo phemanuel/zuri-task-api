@@ -30,7 +30,7 @@ class ApiController extends Controller
         $githubFileURL = URL::to('/') . '/' . __FILE__;        
 
         // Get the GitHub URL of the full source code
-        $githubSourceURL = 'https://github.com/phemanuel/zuri-backend';
+        $githubSourceURL = 'https://github.com/phemanuel/zuri-task-api';
 
         // Return the information in JSON format
         $data = [
