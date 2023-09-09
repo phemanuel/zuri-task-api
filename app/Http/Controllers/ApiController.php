@@ -15,7 +15,7 @@ class ApiController extends Controller
         $slackName = 'HNGx';
         $track = 'Backend';
         
-        // Validate the track (you can customize this validation as needed)
+        // Validate the track
         if (!in_array($track, ['Backend', 'Frontend'])) {
             return response()->json(['error' => 'Invalid track'], 400);
         }
