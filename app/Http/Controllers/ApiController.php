@@ -27,8 +27,7 @@ class ApiController extends Controller
         $currentUTCTime = Carbon::now('UTC')->toDateTimeString();
 
         // Get the GitHub URL of the file being run
-        $githubFileURL = URL::to('/') . '/' . __FILE__;
-        //$githubFileURL = 'https://github.com/phemanuel/zuri-backend';
+        $githubFileURL = URL::to('/') . '/' . __FILE__;        
 
         // Get the GitHub URL of the full source code
         $githubSourceURL = 'https://github.com/phemanuel/zuri-backend';
@@ -41,8 +40,9 @@ class ApiController extends Controller
             'track' => $track,
             'github_file_url' => $githubFileURL,
             'github_source_url' => $githubSourceURL,
+            'status' => 200,
         ];
 
-        return response()->json($data, 200);
+        return response()->json($data);
     }
 }
