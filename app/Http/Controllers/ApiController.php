@@ -11,14 +11,20 @@ class ApiController extends Controller
     //
     public function zuriTask(Request $request)
     {
+        // Validate query parameters
+        $request->validate([
+            'slack_name' => 'required',
+            'track' => 'required',
+        ]);
+
         // Get required parameters
-        $slackName = 'HNGx';
-        $track = 'Backend';
+        $slackName = $request->input('slack_name');
+        $track = $request->input('track');
         
         // Validate the track
-        if (!in_array($track, ['Backend', 'Frontend'])) {
-            return response()->json(['error' => 'Invalid track'], 400);
-        }
+        // if (!in_array($track, ['Backend', 'Frontend'])) {
+        //     return response()->json(['error' => 'Invalid track'], 400);
+        // }
 
         // Get current day of the week
         $currentDayOfWeek = Carbon::now()->format('l');
