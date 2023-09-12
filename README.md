@@ -11,6 +11,7 @@ This is a simple RESTful API built with Laravel to manage persons. It allows you
 These instructions will help you set up and run the API on your local development environment.
 #### Prerequisites
 To run this API, you need to have the following software installed:
+
 •	PHP
 •	Composer
 •	Laravel
