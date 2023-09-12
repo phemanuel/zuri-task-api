@@ -72,13 +72,13 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 }
 ```
 #### - Create a New Person
-•	Endpoint:http://localhost:8000/api/
+•	Endpoint:http://localhost:8000/api/person
 
 •	HTTP Method: POST
 
 •	Description: Create a new person.
 
-•	Usage : curl -X POST -H "Content-Type: application/json" -d '{"name":"Name"}' http://localhost:8000/api/
+•	Usage : curl -X POST -H "Content-Type: application/json" -d '{"name":"Name"}' http://localhost:8000/api/person
 
 •	Result :
 ```sh
