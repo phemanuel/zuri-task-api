@@ -73,9 +73,13 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 ```
 #### - Create a New Person
 •	Endpoint:http://localhost:8000/api/
+
 •	HTTP Method: POST
+
 •	Description: Create a new person.
+
 •	Usage : curl -X POST -H "Content-Type: application/json" -d '{"name":"Name"}' http://localhost:8000/api/
+
 •	Result :
 ```sh
 {
@@ -86,9 +90,13 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 ```
 #### - Retrieve a Person by Name
 •	Endpoint:http://localhost:8000/api/person
+
 •	HTTP Method: GET
+
 •	Description: Retrieve a person by their name.
+
 •	Usage : curl -X GET http://localhost:8000/api/person?name=NameOfThePerson
+
 •	Result :
 ```sh
 {
@@ -121,9 +129,13 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 
 #### - Delete a Person by Name
 •	Endpoint:http://localhost:8000/api/person
+
 •	HTTP Method: DELETE
+
 •	Description: Delete a person by their name.
+
 •	Usage : curl -X DELETE http://localhost:8000/api/person?name=NameOfThePerson
+
 •	Result :
 ```sh
 {
@@ -137,6 +149,7 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 ```
 #### Error Handling
 •	If a requested person is not found, the API will respond with a 404 Not Found status.
+
 ```sh
 {
     "message": "Person not found",
