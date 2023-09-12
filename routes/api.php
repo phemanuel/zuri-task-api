@@ -26,7 +26,7 @@ Route::get('/task1', [ApiController::class, 'zuriTask1']);
 
 //---Stage 2 Task
 Route::get('/', [PersonController::class, 'index']);
-Route::post('/', [PersonController::class, 'store']);
+Route::post('/person', [PersonController::class, 'store']);
 Route::get('/person', [PersonController::class, 'show']);
 Route::put('/person', [PersonController::class, 'update']);
 Route::delete('/person', [PersonController::class, 'destroy']);
