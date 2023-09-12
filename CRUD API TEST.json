@@ -1,0 +1,146 @@
+{
+	"id": "f6555706-1762-4d24-8a87-1a3bd036dfad",
+	"name": "CRUD API TEST",
+	"timestamp": "2023-09-12T20:49:55.318Z",
+	"collection_id": "28472403-9dda97ae-337c-409b-b07c-c3b6b84f71a8",
+	"folder_id": 0,
+	"environment_id": "28472403-5359af98-398c-41f4-b019-356d594506f9",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-09-12T20:49:52.383Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "37e57766-b71e-42d8-bde0-d4c38e0cc140",
+			"name": "CREATE A NEW PERSON",
+			"url": "http://localhost:8000/api/",
+			"time": 828,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				828
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "82b44a05-6458-407a-a8c8-a96d5d39bb2c",
+			"name": "GET A SINGLE PERSON",
+			"url": "http://localhost:8000/api/person?name=Paul Awolola",
+			"time": 502,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				502
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "637fed63-0b7b-409d-a121-da089ba53892",
+			"name": "UPDATE A PERSON",
+			"url": "http://localhost:8000/api/person?name=Paul Awolola",
+			"time": 422,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				422
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "f9fa79e9-fc99-4b3d-98c6-e45da5a382fb",
+			"name": "DELETE A PERSON",
+			"url": "http://localhost:8000/api/person?name=Paul Awolola Olusogo",
+			"time": 410,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				410
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2162,
+	"collection": {
+		"requests": [
+			{
+				"id": "37e57766-b71e-42d8-bde0-d4c38e0cc140",
+				"method": "POST"
+			},
+			{
+				"id": "82b44a05-6458-407a-a8c8-a96d5d39bb2c",
+				"method": "GET"
+			},
+			{
+				"id": "637fed63-0b7b-409d-a121-da089ba53892",
+				"method": "PUT"
+			},
+			{
+				"id": "f9fa79e9-fc99-4b3d-98c6-e45da5a382fb",
+				"method": "DELETE"
+			}
+		]
+	}
+}
