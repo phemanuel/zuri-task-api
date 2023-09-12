@@ -20,19 +20,26 @@ To run this API, you need to have the following software installed:
 
 #### Installing
 1.	Clone the repository to your local machine:
+	
 git clone <repository-url> 
 2.	Navigate to the project directory:
+
 cd <project-directory> 
 3.	Install the project dependencies using Composer:
+
 composer install 
-4.	Configure your environment variables by copying the .env.example file to .env and setting up your database connection:
-cp .env.example .env 
+4.	Configure your environment variables in the .env file and setting up your database connection:
+
 5.	Generate an application key:
+	
 php artisan key:generate 
 6.	Run database migrations to create the necessary tables:
+   
 php artisan migrate 
 7.	Start the development server:
+
 php artisan serve 
+
 Your API should now be running at http://localhost:8000.
 
 #### API Endpoints
