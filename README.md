@@ -51,10 +51,15 @@ Your API should now be running at http://localhost:8000.
 You can use tools like cURL or Postman to interact with the API endpoints.
 #### - List All Persons
 •	Endpoint:http://localhost:8000/api/
+
 •	HTTP Method: GET
+
 •	Description: Retrieve a list of all persons in the database.
+
 •	Usage : curl -X GET http://localhost:8000/api/
+
 •	Result :
+
 ```sh
 {
     "names": [
