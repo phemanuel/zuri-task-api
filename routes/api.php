@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\PersonController;
 
 
 /*
@@ -20,4 +21,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/', [ApiController::class, 'zuriTask']);
+//-----Stage 1 Task
+Route::get('/task1', [ApiController::class, 'zuriTask1']);
+
+//---Stage 2 Task
+Route::get('/', [PersonController::class, 'index']);
+Route::post('/', [PersonController::class, 'store']);
+Route::get('/person', [PersonController::class, 'show']);
+Route::put('/person', [PersonController::class, 'update']);
+Route::delete('/person', [PersonController::class, 'destroy']);
+
