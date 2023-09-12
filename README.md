@@ -112,9 +112,13 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 ```
 #### - Update a Person by Name
 •	Endpoint:http://localhost:8000/api/person
+
 •	HTTP Method: PUT
+
 •	Description: Update a person by their name.
+
 •	Usage : curl -X PUT -H "Content-Type: application/json" -d '{"new_name":"NewName"}' http://localhost:8000/api/person?name=OldName
+
 •	Result :
 ```sh
 {
