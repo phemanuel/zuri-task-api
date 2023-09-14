@@ -1,6 +1,6 @@
 # REST API FOR MANAGING PERSONS
 
-This is a simple RESTful API built with Laravel to manage persons. It allows you to perform CRUD (Create, Read, Update, Delete) operations on a "person" resource, using the person's name as the identifier.
+This is a simple RESTful API built with Laravel to manage persons. It allows you to perform CRUD (Create, Read, Update, Delete) operations on a "person" resource, using the person's id as the identifier.
 
 - Create a new person
 - Fetch a person by name
