@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Person;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
 class PersonController extends Controller
 {
     /**
@@ -59,32 +59,34 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
+        // Validate the 'name' field from the request
+        $validator = Validator::make($request->all(), [
             'name' => 'required|string',
         ]);
-    
-        Person::create($data);
+
+        // Check if validation fails
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+        // If validation passes, create and save the person
+        $person = new Person;
+        $person->name = $request->input('name');
+        $person->save();
+
         return response()->json([
-            'name' => $request->name,
+            'name' => $request->input('name'),
             'message' => 'Person created successfully',
-            'status' => 200
+            'status' => 201
         ]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Request $request)
+    public function show($id)
     {
-        // Validate that the 'name' parameter is required and a string
-        $request->validate([
-            'name' => 'required|string',
-        ]);
-        // Get the 'name' query parameter from the request
-        $name = trim($request->input('name'));        
-        // Query the database to find a person by name
-        $person = Person::where('name', $name)->first();
-
+        $person = Person::find($id);
+        //---check if id exists
         if (!$person) {
             return response()->json([
                 'message' => 'Person not found',
@@ -110,32 +112,29 @@ class PersonController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        // Validate that the 'name' parameter is required and a string
-        $request->validate([
-            'name' => 'required|string',
-        ]);
-
-        // Get the 'name' query parameter from the request
-        $name = trim($request->input('name'));
-
-        // Query the database to find a person by name
-        $person = Person::where('name', $name)->first();
-
+        $person = Person::find($id);
+        //--check if id exist
         if (!$person) {
             return response()->json([
                 'message' => 'Person not found',
                 'status' => 404,
             ]);
         }
-
-        // Validate and update the person's information
-        $data = $request->validate([
-            'new_name' => 'required|string', 
+        // Validate the 'name' field from the request
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string',
         ]);
 
-        $person->update(['name' => $data['new_name']]);
+        // Check if validation fails
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+        
+        //--if validation passed
+        $person->name = $request->input('name');
+        $person->save();
 
         return response()->json([
             'name' => $person->fresh(), 
@@ -147,25 +146,17 @@ class PersonController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Request $request)
+    public function destroy($id)
     {
         // Validate that the 'name' parameter is required and a string
-        $request->validate([
-            'name' => 'required|string',
-        ]);
-        // Get the 'name' query parameter from the request
-        $name = trim($request->input('name'));
-        $person = Person::where('name', $name)->first();
-
+        $person = Person::find($id);
         if (!$person) {
             return response()->json([
                 'message' => 'Person not found',
                 'status'   => 404
             ]);
         }
-
-        $person->delete();
-        
+        $person->delete();   
         return response()->json([
             'name' => $person,
             'message' => 'Person deleted successfully',
