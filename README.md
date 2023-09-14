@@ -50,13 +50,13 @@ Your API should now be running at http://localhost:8000.
 #### API Endpoints
 You can use tools like cURL or Postman to interact with the API endpoints.
 #### - List All Persons
-•	Endpoint:http://localhost:8000/api/
+•	Endpoint:http://localhost:8000/api
 
 •	HTTP Method: GET
 
 •	Description: Retrieve a list of all persons in the database.
 
-•	Usage : curl -X GET http://localhost:8000/api/
+•	Usage : curl -X GET http://localhost:8000/api
 
 •	Result :
 
@@ -72,13 +72,13 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 }
 ```
 #### - Create a New Person
-•	Endpoint:http://localhost:8000/api/
+•	Endpoint:http://localhost:8000/api
 
 •	HTTP Method: POST
 
 •	Description: Create a new person.
 
-•	Usage : curl -X POST -H "Content-Type: application/json" -d '{"name":"Name"}' "http://localhost:8000/api/"
+•	Usage : curl -X POST -H "Content-Type: application/json" -d '{"name":"Name"}' "http://localhost:8000/api"
 
 •	Result :
 ```sh
@@ -153,7 +153,7 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 ```
 
 ### Note
-•	You can get the id of a person by listing all persons using this endpoint (http://localhost:8000/api/).
+•	You can get the id of a person by listing all persons using this endpoint (http://localhost:8000/api).
 #### Error Handling
 •	If a requested person is not found, the API will respond with a 404 Not Found status.
 
