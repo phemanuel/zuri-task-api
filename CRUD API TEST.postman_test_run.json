@@ -1,0 +1,177 @@
+{
+	"id": "9891d454-6def-42d8-a8f4-f4c603389e17",
+	"name": "CRUD API TEST",
+	"timestamp": "2023-09-14T19:56:42.219Z",
+	"collection_id": "28472403-9dda97ae-337c-409b-b07c-c3b6b84f71a8",
+	"folder_id": 0,
+	"environment_id": "28472403-5359af98-398c-41f4-b019-356d594506f9",
+	"totalPass": 5,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-09-14T19:56:39.316Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "6df9c82c-26bc-491f-bbd8-bd20d1082066",
+			"name": "GET ALL PERSONS",
+			"url": "http://localhost:8000/api/",
+			"time": 447,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				447
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "37e57766-b71e-42d8-bde0-d4c38e0cc140",
+			"name": "CREATE A NEW PERSON",
+			"url": "http://localhost:8000/api",
+			"time": 422,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				422
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "82b44a05-6458-407a-a8c8-a96d5d39bb2c",
+			"name": "GET A SINGLE PERSON",
+			"url": "http://localhost:8000/api/16",
+			"time": 400,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				400
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "637fed63-0b7b-409d-a121-da089ba53892",
+			"name": "UPDATE A PERSON",
+			"url": "http://localhost:8000/api/16?name=Femi Emmanuel Akinyooye",
+			"time": 383,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				383
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "f9fa79e9-fc99-4b3d-98c6-e45da5a382fb",
+			"name": "DELETE A PERSON",
+			"url": "http://localhost:8000/api/16",
+			"time": 386,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				386
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2038,
+	"collection": {
+		"requests": [
+			{
+				"id": "6df9c82c-26bc-491f-bbd8-bd20d1082066",
+				"method": "GET"
+			},
+			{
+				"id": "37e57766-b71e-42d8-bde0-d4c38e0cc140",
+				"method": "POST"
+			},
+			{
+				"id": "82b44a05-6458-407a-a8c8-a96d5d39bb2c",
+				"method": "GET"
+			},
+			{
+				"id": "637fed63-0b7b-409d-a121-da089ba53892",
+				"method": "PUT"
+			},
+			{
+				"id": "f9fa79e9-fc99-4b3d-98c6-e45da5a382fb",
+				"method": "DELETE"
+			}
+		]
+	}
+}
