@@ -93,7 +93,7 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 
 •	HTTP Method: GET
 
-•	Description: Retrieve a person by their name.
+•	Description: Retrieve a person.
 
 •	Usage : curl -X GET http://localhost:8000/api/id
 
@@ -115,7 +115,7 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 
 •	HTTP Method: PUT
 
-•	Description: Update a person by their name.
+•	Description: Update a person.
 
 •	Usage : curl -X PUT -H "Content-Type: application/json" -d '{"name":"NewName"}' http://localhost:8000/api/id
 
@@ -136,7 +136,7 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 
 •	HTTP Method: DELETE
 
-•	Description: Delete a person by their name.
+•	Description: Delete a person.
 
 •	Usage : curl -X DELETE http://localhost:8000/api/id
 
