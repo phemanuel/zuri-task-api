@@ -72,30 +72,30 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 }
 ```
 #### - Create a New Person
-•	Endpoint:http://localhost:8000/api/person
+•	Endpoint:http://localhost:8000/api/
 
 •	HTTP Method: POST
 
 •	Description: Create a new person.
 
-•	Usage : curl -X POST -H "Content-Type: application/json" -d '{"name":"Name"}' "http://localhost:8000/api/person"
+•	Usage : curl -X POST -H "Content-Type: application/json" -d '{"name":"Name"}' "http://localhost:8000/api/"
 
 •	Result :
 ```sh
 {
     "name": "Miracle Peters",
     "message": "Person created successfully",
-    "status": 200
+    "status": 201
 }
 ```
-#### - Retrieve a Person by Name
-•	Endpoint:http://localhost:8000/api/person
+#### - Retrieve a Person 
+•	Endpoint:http://localhost:8000/api/
 
 •	HTTP Method: GET
 
 •	Description: Retrieve a person by their name.
 
-•	Usage : curl -X GET http://localhost:8000/api/person?name=NameOfThePerson
+•	Usage : curl -X GET http://localhost:8000/api/id
 
 •	Result :
 ```sh
@@ -111,13 +111,13 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 
 ```
 #### - Update a Person by Name
-•	Endpoint:http://localhost:8000/api/person
+•	Endpoint:http://localhost:8000/api/id
 
 •	HTTP Method: PUT
 
 •	Description: Update a person by their name.
 
-•	Usage : curl -X PUT -H "Content-Type: application/json" -d '{"new_name":"NewName"}' http://localhost:8000/api/person?name=OldName
+•	Usage : curl -X PUT -H "Content-Type: application/json" -d '{"name":"NewName"}' http://localhost:8000/api/id
 
 •	Result :
 ```sh
@@ -132,13 +132,13 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 ```
 
 #### - Delete a Person by Name
-•	Endpoint:http://localhost:8000/api/person
+•	Endpoint:http://localhost:8000/api/
 
 •	HTTP Method: DELETE
 
 •	Description: Delete a person by their name.
 
-•	Usage : curl -X DELETE http://localhost:8000/api/person?name=NameOfThePerson
+•	Usage : curl -X DELETE http://localhost:8000/api/id
 
 •	Result :
 ```sh
@@ -151,6 +151,9 @@ You can use tools like cURL or Postman to interact with the API endpoints.
     "status": 200
 }
 ```
+
+### Note
+•	You can get the id of a person by listing all persons using this endpoint (http://localhost:8000/api/).
 #### Error Handling
 •	If a requested person is not found, the API will respond with a 404 Not Found status.
 
