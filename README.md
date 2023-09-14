@@ -62,13 +62,21 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 
 ```sh
 {
-    "names": [
-        {
-            "id": 1,
-            "name": "Akinkunmi"
-        }
-    ],
-    "status": 200
+"data": [
+{
+"id": 1,
+"name": "Femi Akinyooye"
+}
+],
+"pagination": {
+"current_page": 1,
+"last_page": 1,
+"total": 1,
+"per_page": 5,
+"prev_page_url": null,
+"next_page_url": null
+},
+"status": 200
 }
 ```
 #### - Create a New Person
@@ -83,7 +91,7 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 •	Result :
 ```sh
 {
-    "name": "Miracle Peters",
+    "name": "Femi Akinyooye",
     "message": "Person created successfully",
     "status": 201
 }
@@ -100,12 +108,10 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 •	Result :
 ```sh
 {
-    "names": [
-        {
-            "id": 1,
-            "name": "Akinkunmi"
-        }
-    ],
+    "name": {
+    "id": 1,
+    "name": "Femi Akinyooye"
+    },
     "status": 200
 }
 
@@ -123,8 +129,8 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 ```sh
 {
     "name": {
-        "id": 5,
-        "name": "Miracle Peter Onyedikachi"
+        "id": 1,
+        "name": "Femi Emmanuel Akinyooye"
     },
     "message": "Person updated successfully",
     "status": 200
@@ -144,8 +150,8 @@ You can use tools like cURL or Postman to interact with the API endpoints.
 ```sh
 {
     "name": {
-        "id": 4,
-        "name": "Paul Awolola"
+        "id": 1,
+        "name": "Femi Emmanuel Akinyooye"
     },
     "message": "Person deleted successfully",
     "status": 200
